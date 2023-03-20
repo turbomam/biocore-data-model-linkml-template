@@ -2,6 +2,7 @@
 /project/docs/
 /tmp/
 .idea
+scratch
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
