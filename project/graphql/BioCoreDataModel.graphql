@@ -1,0 +1,49 @@
+type Activity
+  {
+  }
+
+type Class
+  {
+  }
+
+type Document
+  {
+  }
+
+type Donor
+  {
+  }
+
+type Kind
+  {
+  }
+
+type List
+  {
+  }
+
+type Person
+  {
+  }
+
+type Resource
+  {
+  }
+
+type Sample
+  {
+  }
+
+type Service
+  {
+  }
+
+type SingleCell
+  {
+    hasCellCycle: [String]
+  }
+
+type VocabularyEncodingScheme
+  {
+  }
+

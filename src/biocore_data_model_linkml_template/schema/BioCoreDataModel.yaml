@@ -2,6 +2,7 @@ id: https://datamodel.terra.bio # this will change when BioCore gets a permanent
 name: biocore
 prefixes:
   BioCore: https://datamodel.terra.bio/ # MAM added. This is the URL base for most or all schema elements. It should be given a prefix.
+  TerraCore: https://datamodel.terra.bio/TerraCore#
   dct: http://purl.org/dc/terms/
   foaf: http://xmlns.com/foaf/0.1/
   linkml: https://w3id.org/linkml/

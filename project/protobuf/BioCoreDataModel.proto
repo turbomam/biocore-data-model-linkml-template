@@ -1,0 +1,4 @@
+message SingleCell
+ {
+ repeated  string hasCellCycle = 0
+ }

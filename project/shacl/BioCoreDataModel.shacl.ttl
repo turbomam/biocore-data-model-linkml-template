@@ -1,1 +1,68 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/dc/dcam/VocabularyEncodingScheme> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass <http://purl.org/dc/dcam/VocabularyEncodingScheme> .
+
+<http://purl.org/dc/dcmitype/Service> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass <http://purl.org/dc/dcmitype/Service> .
+
+rdf:List a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass rdf:List .
+
+rdfs:Class a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass rdfs:Class .
+
+rdfs:Resource a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass rdfs:Resource .
+
+<http://www.w3.org/2006/vcard/ns#Kind> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass <http://www.w3.org/2006/vcard/ns#Kind> .
+
+foaf:Document a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass foaf:Document .
+
+foaf:Person a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass foaf:Person .
+
+<https://datamodel.terra.bio/TerraCore#Activity> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass <https://datamodel.terra.bio/TerraCore#Activity> .
+
+<https://datamodel.terra.bio/TerraCore#Donor> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass <https://datamodel.terra.bio/TerraCore#Donor> .
+
+<https://datamodel.terra.bio/TerraCore#Sample> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:targetClass <https://datamodel.terra.bio/TerraCore#Sample> .
+
+<https://datamodel.terra.bio/TerraCore#SingleCell> a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:order 0 ;
+            sh:path <https://datamodel.terra.bio/TerraCore#hasCellCycle> ] ;
+    sh:targetClass <https://datamodel.terra.bio/TerraCore#SingleCell> .
 

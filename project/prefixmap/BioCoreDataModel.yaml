@@ -1,3 +1,35 @@
 {
-   "linkml": "https://w3id.org/linkml/"
+   "BioCore": "https://datamodel.terra.bio/",
+   "dct": "http://purl.org/dc/terms/",
+   "foaf": "http://xmlns.com/foaf/0.1/",
+   "linkml": "https://w3id.org/linkml/",
+   "prov": "http://www.w3.org/ns/prov#",
+   "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+   "schema": "http://schema.org/",
+   "skos": "http://www.w3.org/2004/02/skos/core#",
+   "Class": {
+      "@id": "rdfs:Class"
+   },
+   "Document": {
+      "@id": "http://xmlns.com/foaf/0.1/Document"
+   },
+   "Kind": {
+      "@id": "http://www.w3.org/2006/vcard/ns#Kind"
+   },
+   "List": {
+      "@id": "rdf:List"
+   },
+   "Person": {
+      "@id": "http://xmlns.com/foaf/0.1/Person"
+   },
+   "Resource": {
+      "@id": "rdfs:Resource"
+   },
+   "Service": {
+      "@id": "http://purl.org/dc/dcmitype/Service"
+   },
+   "VocabularyEncodingScheme": {
+      "@id": "http://purl.org/dc/dcam/VocabularyEncodingScheme"
+   }
 }

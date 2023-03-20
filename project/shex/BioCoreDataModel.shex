@@ -1,6 +1,10 @@
 BASE <https://datamodel.terra.bio/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX BioCoreFields: <https://w3id.org/None/>
 
 
 linkml:String xsd:string
@@ -34,5 +38,77 @@ linkml:Ncname xsd:string
 linkml:Objectidentifier IRI
 
 linkml:Nodeidentifier NONLITERAL
+
+<Activity> CLOSED {
+    (  $<Activity_tes> rdf:type . * ;
+       rdf:type [ <https://datamodel.terra.bio/TerraCore#Activity> ] ?
+    )
+}
+
+BioCoreFields:Class CLOSED {
+    (  $BioCoreFields:Class_tes rdf:type . * ;
+       rdf:type [ rdfs:Class ] ?
+    )
+}
+
+BioCoreFields:Document CLOSED {
+    (  $BioCoreFields:Document_tes rdf:type . * ;
+       rdf:type [ foaf:Document ] ?
+    )
+}
+
+<Donor> CLOSED {
+    (  $<Donor_tes> rdf:type . * ;
+       rdf:type [ <https://datamodel.terra.bio/TerraCore#Donor> ] ?
+    )
+}
+
+BioCoreFields:Kind CLOSED {
+    (  $BioCoreFields:Kind_tes rdf:type . * ;
+       rdf:type [ <http://www.w3.org/2006/vcard/ns#Kind> ] ?
+    )
+}
+
+BioCoreFields:List CLOSED {
+    (  $BioCoreFields:List_tes rdf:type . * ;
+       rdf:type [ rdf:List ] ?
+    )
+}
+
+BioCoreFields:Person CLOSED {
+    (  $BioCoreFields:Person_tes rdf:type . * ;
+       rdf:type [ foaf:Person ] ?
+    )
+}
+
+BioCoreFields:Resource CLOSED {
+    (  $BioCoreFields:Resource_tes rdf:type . * ;
+       rdf:type [ rdfs:Resource ] ?
+    )
+}
+
+<Sample> CLOSED {
+    (  $<Sample_tes> rdf:type . * ;
+       rdf:type [ <https://datamodel.terra.bio/TerraCore#Sample> ] ?
+    )
+}
+
+BioCoreFields:Service CLOSED {
+    (  $BioCoreFields:Service_tes rdf:type . * ;
+       rdf:type [ <http://purl.org/dc/dcmitype/Service> ] ?
+    )
+}
+
+BioCoreFields:SingleCell CLOSED {
+    (  $BioCoreFields:SingleCell_tes <https://datamodel.terra.bio/TerraCore#hasCellCycle> @linkml:String * ;
+       rdf:type [ <https://datamodel.terra.bio/TerraCore#SingleCell> ] ?
+    )
+}
+
+BioCoreFields:VocabularyEncodingScheme CLOSED {
+    (  $BioCoreFields:VocabularyEncodingScheme_tes rdf:type . * ;
+       rdf:type [ <http://purl.org/dc/dcam/VocabularyEncodingScheme> ] ?
+    )
+}
 
 

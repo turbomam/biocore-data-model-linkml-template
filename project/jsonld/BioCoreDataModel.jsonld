@@ -2,13 +2,43 @@
   "name": "biocore",
   "id": "https://datamodel.terra.bio",
   "imports": [
-    "linkml:types"
+    "linkml:types",
+    "BioCoreFields",
+    "BioCoreTables-min3"
   ],
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "prefixes": [
     {
+      "prefix_prefix": "BioCore",
+      "prefix_reference": "https://datamodel.terra.bio/"
+    },
+    {
+      "prefix_prefix": "dct",
+      "prefix_reference": "http://purl.org/dc/terms/"
+    },
+    {
+      "prefix_prefix": "foaf",
+      "prefix_reference": "http://xmlns.com/foaf/0.1/"
+    },
+    {
       "prefix_prefix": "linkml",
       "prefix_reference": "https://w3id.org/linkml/"
+    },
+    {
+      "prefix_prefix": "prov",
+      "prefix_reference": "http://www.w3.org/ns/prov#"
+    },
+    {
+      "prefix_prefix": "rdf",
+      "prefix_reference": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    },
+    {
+      "prefix_prefix": "rdfs",
+      "prefix_reference": "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    {
+      "prefix_prefix": "skos",
+      "prefix_reference": "http://www.w3.org/2004/02/skos/core#"
     }
   ],
   "default_prefix": "https://datamodel.terra.bio/",
@@ -234,15 +264,2729 @@
       "@type": "TypeDefinition"
     }
   ],
+  "slots": [
+    {
+      "name": "closeMatch",
+      "definition_uri": "https://datamodel.terra.bio/closeMatch",
+      "notes": [
+        "MAM added this so that the hasCrossReference is_a would be legal"
+      ],
+      "from_schema": "https://datamodel.terra.bio",
+      "mappings": [
+        "http://www.w3.org/2004/02/skos/core#closeMatch"
+      ],
+      "slot_uri": "http://www.w3.org/2004/02/skos/core#closeMatch",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "wasGeneratedBy",
+      "definition_uri": "https://datamodel.terra.bio/wasGeneratedBy",
+      "notes": [
+        "MAM added this so that the isGeneratedByPipeline is_a would be legal"
+      ],
+      "from_schema": "https://datamodel.terra.bio",
+      "slot_uri": "https://datamodel.terra.bio/wasGeneratedBy",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "used",
+      "definition_uri": "https://datamodel.terra.bio/used",
+      "notes": [
+        "MAM added this so that the usesAntibody is_a would be legal"
+      ],
+      "from_schema": "https://datamodel.terra.bio",
+      "slot_uri": "https://datamodel.terra.bio/used",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "format",
+      "definition_uri": "https://datamodel.terra.bio/format",
+      "notes": [
+        "MAM added this so that the hasFileFormat is_a would be legal"
+      ],
+      "from_schema": "https://datamodel.terra.bio",
+      "slot_uri": "https://datamodel.terra.bio/format",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "member",
+      "definition_uri": "https://w3id.org/None/member",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://www.w3.org/2000/01/rdf-schema#member"
+      ],
+      "slot_uri": "http://www.w3.org/2000/01/rdf-schema#member",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "wasUsedBy",
+      "definition_uri": "https://w3id.org/None/wasUsedBy",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://www.w3.org/ns/prov#wasUsedBy"
+      ],
+      "slot_uri": "http://www.w3.org/ns/prov#wasUsedBy",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "confirmsDisease",
+      "definition_uri": "https://w3id.org/None/confirmsDisease",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#confirmsDisease"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#confirmsDisease",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "donated",
+      "definition_uri": "https://w3id.org/None/donated",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#donated"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#donated",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAge",
+      "definition_uri": "https://w3id.org/None/hasAge",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAge"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAge",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAgeAtDeath",
+      "definition_uri": "https://w3id.org/None/hasAgeAtDeath",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAgeAtDeath"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAgeAtDeath",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAgeAtDiagnosis",
+      "definition_uri": "https://w3id.org/None/hasAgeAtDiagnosis",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAgeAtDiagnosis"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAgeAtDiagnosis",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAgeAtOnset",
+      "definition_uri": "https://w3id.org/None/hasAgeAtOnset",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAgeAtOnset"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAgeAtOnset",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAprioriCellType",
+      "definition_uri": "https://w3id.org/None/hasAprioriCellType",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAprioriCellType"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAprioriCellType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAssayActivity",
+      "definition_uri": "https://w3id.org/None/hasAssayActivity",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAssayActivity"
+      ],
+      "is_a": "wasUsedBy",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAssayActivity",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAssayType",
+      "definition_uri": "https://w3id.org/None/hasAssayType",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAssayType"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAssayType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasBioSample",
+      "definition_uri": "https://w3id.org/None/hasBioSample",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasBioSample"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasBioSample",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasBioSampleType",
+      "definition_uri": "https://w3id.org/None/hasBioSampleType",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasBioSampleType"
+      ],
+      "is_a": "hasSampleType",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasBioSampleType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasChild",
+      "definition_uri": "https://w3id.org/None/hasChild",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasChild"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasChild",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasCountry",
+      "definition_uri": "https://w3id.org/None/hasCountry",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasCountry"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasCountry",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasCrossReference",
+      "definition_uri": "https://w3id.org/None/hasCrossReference",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasCrossReference"
+      ],
+      "is_a": "closeMatch",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasCrossReference",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasCurrentAddress",
+      "definition_uri": "https://w3id.org/None/hasCurrentAddress",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasCurrentAddress"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasCurrentAddress",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDataModality",
+      "definition_uri": "https://w3id.org/None/hasDataModality",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDataModality"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDataModality",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDiagnosis",
+      "definition_uri": "https://w3id.org/None/hasDiagnosis",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDiagnosis"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDiagnosis",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDonor",
+      "definition_uri": "https://w3id.org/None/hasDonor",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDonor"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDonor",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDonorAgeAtCollection",
+      "definition_uri": "https://w3id.org/None/hasDonorAgeAtCollection",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDonorAgeAtCollection"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDonorAgeAtCollection",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDonorAgeAtEvent",
+      "definition_uri": "https://w3id.org/None/hasDonorAgeAtEvent",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDonorAgeAtEvent"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDonorAgeAtEvent",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasFileSize",
+      "definition_uri": "https://w3id.org/None/hasFileSize",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasFileSize"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasFileSize",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasHalfSibling",
+      "definition_uri": "https://w3id.org/None/hasHalfSibling",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasHalfSibling"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasHalfSibling",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasLibraryPrepActivity",
+      "definition_uri": "https://w3id.org/None/hasLibraryPrepActivity",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasLibraryPrepActivity"
+      ],
+      "is_a": "wasUsedBy",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasLibraryPrepActivity",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasLibraryPreparationType",
+      "definition_uri": "https://w3id.org/None/hasLibraryPreparationType",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasLibraryPreparationType"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasLibraryPreparationType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasMeasurement",
+      "definition_uri": "https://w3id.org/None/hasMeasurement",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasMeasurement"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasMeasurement",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasMolecularSampleType",
+      "definition_uri": "https://w3id.org/None/hasMolecularSampleType",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasMolecularSampleType"
+      ],
+      "is_a": "hasSampleType",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasMolecularSampleType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasParent",
+      "definition_uri": "https://w3id.org/None/hasParent",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasParent"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasParent",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPhenopacket",
+      "definition_uri": "https://w3id.org/None/hasPhenopacket",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPhenopacket"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPhenopacket",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPhenotypicSex",
+      "definition_uri": "https://w3id.org/None/hasPhenotypicSex",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPhenotypicSex"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPhenotypicSex",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasSampleTreatment",
+      "definition_uri": "https://w3id.org/None/hasSampleTreatment",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasSampleTreatment"
+      ],
+      "is_a": "wasUsedBy",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasSampleTreatment",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasSequenceLocation",
+      "definition_uri": "https://w3id.org/None/hasSequenceLocation",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasSequenceLocation"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasSequenceLocation",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasSequencingActivity",
+      "definition_uri": "https://w3id.org/None/hasSequencingActivity",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasSequencingActivity"
+      ],
+      "is_a": "wasUsedBy",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasSequencingActivity",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasServiceProvider",
+      "definition_uri": "https://w3id.org/None/hasServiceProvider",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasServiceProvider"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasServiceProvider",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasSexAssignedAtBirth",
+      "definition_uri": "https://w3id.org/None/hasSexAssignedAtBirth",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasSexAssignedAtBirth"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasSexAssignedAtBirth",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasSibling",
+      "definition_uri": "https://w3id.org/None/hasSibling",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasSibling"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasSibling",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasTreatment",
+      "definition_uri": "https://w3id.org/None/hasTreatment",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasTreatment"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasTreatment",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasVariantCall",
+      "definition_uri": "https://w3id.org/None/hasVariantCall",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasVariantCall"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasVariantCall",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasWeight",
+      "definition_uri": "https://w3id.org/None/hasWeight",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasWeight"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasWeight",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isFundedBy",
+      "definition_uri": "https://w3id.org/None/isFundedBy",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#isFundedBy"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#isFundedBy",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isGeneratedByPipeline",
+      "definition_uri": "https://w3id.org/None/isGeneratedByPipeline",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#isGeneratedByPipeline"
+      ],
+      "is_a": "wasGeneratedBy",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#isGeneratedByPipeline",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isPairedWith",
+      "definition_uri": "https://w3id.org/None/isPairedWith",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#isPairedWith"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#isPairedWith",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "usesAntibody",
+      "definition_uri": "https://w3id.org/None/usesAntibody",
+      "comments": [
+        "Can be used as an ObjectProperty with the Antibody class or as a DataType property, depending on need. Antibody should be linked to OBI in future. Note this could link to nonassay activities like CHiP"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#usesAntibody"
+      ],
+      "is_a": "used",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#usesAntibody",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "usesLibrary",
+      "definition_uri": "https://w3id.org/None/usesLibrary",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#usesLibrary"
+      ],
+      "is_a": "used",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#usesLibrary",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "usesReferenceAssembly",
+      "definition_uri": "https://w3id.org/None/usesReferenceAssembly",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#usesReferenceAssembly"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#usesReferenceAssembly",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "usesSample",
+      "definition_uri": "https://w3id.org/None/usesSample",
+      "comments": [
+        "BioSample and MolecularSample both inherit range from Sample"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#usesSample"
+      ],
+      "is_a": "used",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#usesSample",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasActivityType",
+      "definition_uri": "https://w3id.org/None/hasActivityType",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasActivityType"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasActivityType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAgeCategory",
+      "definition_uri": "https://w3id.org/None/hasAgeCategory",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAgeCategory"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAgeCategory",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAgeUnit",
+      "definition_uri": "https://w3id.org/None/hasAgeUnit",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAgeUnit"
+      ],
+      "is_a": "hasUnit",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAgeUnit",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAlignedFragments",
+      "definition_uri": "https://w3id.org/None/hasAlignedFragments",
+      "comments": [
+        "For alignment file types."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAlignedFragments"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAlignedFragments",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAllele",
+      "definition_uri": "https://w3id.org/None/hasAllele",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAllele"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAllele",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAmount",
+      "definition_uri": "https://w3id.org/None/hasAmount",
+      "comments": [
+        "Consider replacing with a measurement ontology"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAmount"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAmount",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAmountUnit",
+      "definition_uri": "https://w3id.org/None/hasAmountUnit",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAmountUnit"
+      ],
+      "is_a": "hasUnit",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAmountUnit",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAnatomicalRegion",
+      "definition_uri": "https://w3id.org/None/hasAnatomicalRegion",
+      "comments": [
+        "Many groups are convening to define Common Coordinate Frameworks for specific organs/species.  This will be a rapidly evolving area in the near future.  Thus allowing text or URI as we wait for the field to mature allows us to support what we hope will at a minimum be controlled vocabulary under discussion of these groups."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAnatomicalRegion"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAnatomicalRegion",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAnatomicalSite",
+      "definition_uri": "https://w3id.org/None/hasAnatomicalSite",
+      "comments": [
+        "May want to consider restricting this to UBERON terms but currently any URI is allowed.  This is useful for imaging and other whole body samples as UBERON does not have \\\"whole body\\\".  Use NCIT:C13041 for this."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAnatomicalSite"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAnatomicalSite",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAverageReadLength",
+      "definition_uri": "https://w3id.org/None/hasAverageReadLength",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAverageReadLength"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAverageReadLength",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasBirthYear",
+      "definition_uri": "https://w3id.org/None/hasBirthYear",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasBirthYear"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasBirthYear",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasCellCycle",
+      "definition_uri": "https://w3id.org/None/hasCellCycle",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasCellCycle"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasCellCycle",
+      "multivalued": true,
+      "owner": "SingleCell",
+      "domain_of": [
+        "SingleCell"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasCellState",
+      "definition_uri": "https://w3id.org/None/hasCellState",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasCellState"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasCellState",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasChecksum",
+      "definition_uri": "https://w3id.org/None/hasChecksum",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasChecksum"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasChecksum",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasChromosome",
+      "definition_uri": "https://w3id.org/None/hasChromosome",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasChromosome"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasChromosome",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasClonality",
+      "definition_uri": "https://w3id.org/None/hasClonality",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasClonality"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasClonality",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDateCollected",
+      "definition_uri": "https://w3id.org/None/hasDateCollected",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDateCollected"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDateCollected",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDateOfBirth",
+      "definition_uri": "https://w3id.org/None/hasDateOfBirth",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDateOfBirth"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDateOfBirth",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDateOfDeath",
+      "definition_uri": "https://w3id.org/None/hasDateOfDeath",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDateOfDeath"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDateOfDeath",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDevelopmentalStage",
+      "definition_uri": "https://w3id.org/None/hasDevelopmentalStage",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDevelopmentalStage"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDevelopmentalStage",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDisease",
+      "definition_uri": "https://w3id.org/None/hasDisease",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDisease"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDisease",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDiseaseStageType",
+      "definition_uri": "https://w3id.org/None/hasDiseaseStageType",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDiseaseStageType"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDiseaseStageType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDiseaseStageValue",
+      "definition_uri": "https://w3id.org/None/hasDiseaseStageValue",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDiseaseStageValue"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDiseaseStageValue",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDonorTreatmentType",
+      "definition_uri": "https://w3id.org/None/hasDonorTreatmentType",
+      "comments": [
+        "Need to add recommended vocabulary."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDonorTreatmentType"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDonorTreatmentType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDose",
+      "definition_uri": "https://w3id.org/None/hasDose",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDose"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDose",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDuplicateFragments",
+      "definition_uri": "https://w3id.org/None/hasDuplicateFragments",
+      "comments": [
+        "For alignment data types.",
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDuplicateFragments"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDuplicateFragments",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDuration",
+      "definition_uri": "https://w3id.org/None/hasDuration",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDuration"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDuration",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasDurationUnit",
+      "definition_uri": "https://w3id.org/None/hasDurationUnit",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasDurationUnit"
+      ],
+      "is_a": "hasUnit",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasDurationUnit",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasEstimatedLibrarySize",
+      "definition_uri": "https://w3id.org/None/hasEstimatedLibrarySize",
+      "comments": [
+        "For alignment file types.",
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasEstimatedLibrarySize"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasEstimatedLibrarySize",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasFamilyIdentifier",
+      "definition_uri": "https://w3id.org/None/hasFamilyIdentifier",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasFamilyIdentifier"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasFamilyIdentifier",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasFileFormat",
+      "definition_uri": "https://w3id.org/None/hasFileFormat",
+      "comments": [
+        "The definition of this field follows the convention used by the Human Cell Atlas."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasFileFormat"
+      ],
+      "is_a": "format",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasFileFormat",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasFragments",
+      "definition_uri": "https://w3id.org/None/hasFragments",
+      "comments": [
+        "For alignment file types.",
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasFragments"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasFragments",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasGRCName",
+      "definition_uri": "https://w3id.org/None/hasGRCName",
+      "comments": [
+        "Name of the Reference Assembly in Genome Reference Consortium format (ncbi.nlm.nih.gov/grc.  Still draft.",
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasGRCName"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasGRCName",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasGeneContext",
+      "definition_uri": "https://w3id.org/None/hasGeneContext",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasGeneContext"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasGeneContext",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasGeneExpressionProgram",
+      "definition_uri": "https://w3id.org/None/hasGeneExpressionProgram",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasGeneExpressionProgram"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasGeneExpressionProgram",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasGeneticAncestry",
+      "definition_uri": "https://w3id.org/None/hasGeneticAncestry",
+      "comments": [
+        "Recommend using HANCESTRO ancestry categories.  http://purl.obolibrary.org/obo/HANCESTRO_0004"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasGeneticAncestry"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasGeneticAncestry",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasGeneticModification",
+      "definition_uri": "https://w3id.org/None/hasGeneticModification",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasGeneticModification"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasGeneticModification",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasGeneticModificationMethod",
+      "definition_uri": "https://w3id.org/None/hasGeneticModificationMethod",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasGeneticModificationMethod"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasGeneticModificationMethod",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasGeneticModificationReference",
+      "definition_uri": "https://w3id.org/None/hasGeneticModificationReference",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasGeneticModificationReference"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasGeneticModificationReference",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasGeneticModificationType",
+      "definition_uri": "https://w3id.org/None/hasGeneticModificationType",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasGeneticModificationType"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasGeneticModificationType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasGenotypicSex",
+      "definition_uri": "https://w3id.org/None/hasGenotypicSex",
+      "comments": [
+        "Add equivalence to http://purl.obolibrary.org/obo/PATO_0020000"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasGenotypicSex"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasGenotypicSex",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasGrade",
+      "definition_uri": "https://w3id.org/None/hasGrade",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasGrade"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasGrade",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasHostOrganism",
+      "definition_uri": "https://w3id.org/None/hasHostOrganism",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasHostOrganism"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasHostOrganism",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasImmunogen",
+      "definition_uri": "https://w3id.org/None/hasImmunogen",
+      "comments": [
+        "Need definition",
+        "Target is a string for now but will ultimately be a class. CHEBI term CHEBI:60816"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasImmunogen"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasImmunogen",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasLibraryLayout",
+      "definition_uri": "https://w3id.org/None/hasLibraryLayout",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasLibraryLayout"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasLibraryLayout",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasLot",
+      "definition_uri": "https://w3id.org/None/hasLot",
+      "comments": [
+        "A serial or lot number that was manufactured together. Added for Antibodies but domain can expand."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasLot"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasLot",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasLowerBound",
+      "definition_uri": "https://w3id.org/None/hasLowerBound",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasLowerBound"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasLowerBound",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasMannerOfDeath",
+      "definition_uri": "https://w3id.org/None/hasMannerOfDeath",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasMannerOfDeath"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasMannerOfDeath",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasMeasurementType",
+      "definition_uri": "https://w3id.org/None/hasMeasurementType",
+      "comments": [
+        "Recommend LOINC or SNOMED vocabularies."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasMeasurementType"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasMeasurementType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasMedication",
+      "definition_uri": "https://w3id.org/None/hasMedication",
+      "comments": [
+        "Recommend term or URL from MEDDRA or RxNORM. Note that this model of a medication is subject to change."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasMedication"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasMedication",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasMorphology",
+      "definition_uri": "https://w3id.org/None/hasMorphology",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasMorphology"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasMorphology",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasNonDuplicatedFragments",
+      "definition_uri": "https://w3id.org/None/hasNonDuplicatedFragments",
+      "comments": [
+        "For alignment file types."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasNonDuplicatedFragments"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasNonDuplicatedFragments",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasOrganismType",
+      "definition_uri": "https://w3id.org/None/hasOrganismType",
+      "comments": [
+        "For example: Homo sapiens from NCBITaxon or http://purl.obolibrary.org/obo/NCBITaxon_9606 "
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasOrganismType"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasOrganismType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPairedEndIdentifier",
+      "definition_uri": "https://w3id.org/None/hasPairedEndIdentifier",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPairedEndIdentifier"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPairedEndIdentifier",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPartNumber",
+      "definition_uri": "https://w3id.org/None/hasPartNumber",
+      "comments": [
+        "The part number is for reordering. Added for Antibodies but domain can expand."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPartNumber"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPartNumber",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPercentAlignedReads",
+      "definition_uri": "https://w3id.org/None/hasPercentAlignedReads",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPercentAlignedReads"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPercentAlignedReads",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPercentDuplicateFragments",
+      "definition_uri": "https://w3id.org/None/hasPercentDuplicateFragments",
+      "comments": [
+        "For alignment file types."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPercentDuplicateFragments"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPercentDuplicateFragments",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPhenotype",
+      "definition_uri": "https://w3id.org/None/hasPhenotype",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPhenotype"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPhenotype",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPlatform",
+      "definition_uri": "https://w3id.org/None/hasPlatform",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPlatform"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPlatform",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPlatformIdentifier",
+      "definition_uri": "https://w3id.org/None/hasPlatformIdentifier",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPlatformIdentifier"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPlatformIdentifier",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPreservationState",
+      "definition_uri": "https://w3id.org/None/hasPreservationState",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPreservationState"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPreservationState",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasProtocol",
+      "definition_uri": "https://w3id.org/None/hasProtocol",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasProtocol"
+      ],
+      "is_a": "used",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasProtocol",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasRace",
+      "definition_uri": "https://w3id.org/None/hasRace",
+      "comments": [
+        "Considering using HANCESTRO ancestry category subclasses as options here.  In the meantime, capturing a text string.  Also consider whether we need to track reported and genetic as determined by genetic analysis."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasRace"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasRace",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasReadCount",
+      "definition_uri": "https://w3id.org/None/hasReadCount",
+      "comments": [
+        "Domain will change from File to SequencingOutputFile or SequenceActivity in future."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasReadCount"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasReadCount",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasReadLength",
+      "definition_uri": "https://w3id.org/None/hasReadLength",
+      "comments": [
+        "Domain will change from File to SequencingOutputFile or SequenceActivity in future."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasReadLength"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasReadLength",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasReferenceAllele",
+      "definition_uri": "https://w3id.org/None/hasReferenceAllele",
+      "comments": [
+        "See also https://vrs.ga4gh.org/en/stable/terms_and_model.html#allele for a more comprehensive model."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasReferenceAllele"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasReferenceAllele",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasReportedEthnicity",
+      "definition_uri": "https://w3id.org/None/hasReportedEthnicity",
+      "comments": [
+        "Recommend using HANCESTRO ancestry categories.  http://purl.obolibrary.org/obo/HANCESTRO_0004."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasReportedEthnicity"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasReportedEthnicity",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasSampleTreatmentMethod",
+      "definition_uri": "https://w3id.org/None/hasSampleTreatmentMethod",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasSampleTreatmentMethod"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasSampleTreatmentMethod",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasSampleTreatmentType",
+      "definition_uri": "https://w3id.org/None/hasSampleTreatmentType",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasSampleTreatmentType"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasSampleTreatmentType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasSampleType",
+      "definition_uri": "https://w3id.org/None/hasSampleType",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasSampleType"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasSampleType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasSequenceExpression",
+      "definition_uri": "https://w3id.org/None/hasSequenceExpression",
+      "comments": [
+        "See https://vrs.ga4gh.org/en/stable/terms_and_model.html#sequence-expression and https://vrsatile.readthedocs.io/en/latest/value_object_descriptor/index.html#expression."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasSequenceExpression"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasSequenceExpression",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasSource",
+      "definition_uri": "https://w3id.org/None/hasSource",
+      "comments": [
+        "The source is a string but will ultimately be a Vendor class. Added for Antibodies but domain can expand."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasSource"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasSource",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasStartPosition",
+      "definition_uri": "https://w3id.org/None/hasStartPosition",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasStartPosition"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasStartPosition",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasStopPosition",
+      "definition_uri": "https://w3id.org/None/hasStopPosition",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasStopPosition"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasStopPosition",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasStrain",
+      "definition_uri": "https://w3id.org/None/hasStrain",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasStrain"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasStrain",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasStructuralVariationType",
+      "definition_uri": "https://w3id.org/None/hasStructuralVariationType",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasStructuralVariationType"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasStructuralVariationType",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasTarget",
+      "definition_uri": "https://w3id.org/None/hasTarget",
+      "comments": [
+        "Need definition",
+        "Target is a string for now but will ultimately be a class, and this will change to an ObjectProperty."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasTarget"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasTarget",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasTemperatureUnit",
+      "definition_uri": "https://w3id.org/None/hasTemperatureUnit",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasTemperatureUnit"
+      ],
+      "is_a": "hasUnit",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasTemperatureUnit",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasTermName",
+      "definition_uri": "https://w3id.org/None/hasTermName",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasTermName"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasTermName",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasTreatmentOutcome",
+      "definition_uri": "https://w3id.org/None/hasTreatmentOutcome",
+      "comments": [
+        "Should the model define a preferred vocabulary? e.g. positive, negative, no effect?  The specific outcome may need to be more specific, reduced tumor size by  .. but the categories listed are useful."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasTreatmentOutcome"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasTreatmentOutcome",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasTumorMorphology",
+      "definition_uri": "https://w3id.org/None/hasTumorMorphology",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasTumorMorphology"
+      ],
+      "is_a": "hasMorphology",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasTumorMorphology",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasURI",
+      "definition_uri": "https://w3id.org/None/hasURI",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasURI"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasURI",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasUnit",
+      "definition_uri": "https://w3id.org/None/hasUnit",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasUnit"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasUnit",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasUpperBound",
+      "definition_uri": "https://w3id.org/None/hasUpperBound",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasUpperBound"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasUpperBound",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasWeightUnit",
+      "definition_uri": "https://w3id.org/None/hasWeightUnit",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasWeightUnit"
+      ],
+      "is_a": "hasUnit",
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasWeightUnit",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isCauseOfDeath",
+      "definition_uri": "https://w3id.org/None/isCauseOfDeath",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#isCauseOfDeath"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#isCauseOfDeath",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isContributorToDeath",
+      "definition_uri": "https://w3id.org/None/isContributorToDeath",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#isContributorToDeath"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#isContributorToDeath",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isWholeCell",
+      "definition_uri": "https://w3id.org/None/isWholeCell",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#isWholeCell"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#isWholeCell",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "usesSoftware",
+      "definition_uri": "https://w3id.org/None/usesSoftware",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#usesSoftware"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#usesSoftware",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "domainIncludes",
+      "definition_uri": "https://w3id.org/None/domainIncludes",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/dcam/domainIncludes"
+      ],
+      "slot_uri": "http://purl.org/dc/dcam/domainIncludes",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rangeIncludes",
+      "definition_uri": "https://w3id.org/None/rangeIncludes",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://schema.org/rangeIncludes"
+      ],
+      "slot_uri": "http://schema.org/rangeIncludes",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "abstract",
+      "definition_uri": "https://w3id.org/None/abstract",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/abstract"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/abstract",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "accessRights",
+      "definition_uri": "https://w3id.org/None/accessRights",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/accessRights"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/accessRights",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "accrualMethod",
+      "definition_uri": "https://w3id.org/None/accrualMethod",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/accrualMethod"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/accrualMethod",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "accrualPeriodicity",
+      "definition_uri": "https://w3id.org/None/accrualPeriodicity",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/accrualPeriodicity"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/accrualPeriodicity",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "accrualPolicy",
+      "definition_uri": "https://w3id.org/None/accrualPolicy",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/accrualPolicy"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/accrualPolicy",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "audience",
+      "definition_uri": "https://w3id.org/None/audience",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/audience"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/audience",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "conformsTo",
+      "definition_uri": "https://w3id.org/None/conformsTo",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/conformsTo"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/conformsTo",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "contributor",
+      "definition_uri": "https://w3id.org/None/contributor",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/contributor"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/contributor",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "coverage",
+      "definition_uri": "https://w3id.org/None/coverage",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/coverage"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/coverage",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "creator",
+      "definition_uri": "https://w3id.org/None/creator",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/creator"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/creator",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "description",
+      "definition_uri": "https://w3id.org/None/description",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/description"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/description",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "educationLevel",
+      "definition_uri": "https://w3id.org/None/educationLevel",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/educationLevel"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/educationLevel",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "extent",
+      "definition_uri": "https://w3id.org/None/extent",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/extent"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/extent",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasFormat",
+      "definition_uri": "https://w3id.org/None/hasFormat",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/hasFormat"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/hasFormat",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasVersion",
+      "definition_uri": "https://w3id.org/None/hasVersion",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasVersion"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasVersion",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isFormatOf",
+      "definition_uri": "https://w3id.org/None/isFormatOf",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/isFormatOf"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/isFormatOf",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isPartOf",
+      "definition_uri": "https://w3id.org/None/isPartOf",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/isPartOf"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/isPartOf",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isReferencedBy",
+      "definition_uri": "https://w3id.org/None/isReferencedBy",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/isReferencedBy"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/isReferencedBy",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isReplacedBy",
+      "definition_uri": "https://w3id.org/None/isReplacedBy",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/isReplacedBy"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/isReplacedBy",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isRequiredBy",
+      "definition_uri": "https://w3id.org/None/isRequiredBy",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/isRequiredBy"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/isRequiredBy",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "isVersionOf",
+      "definition_uri": "https://w3id.org/None/isVersionOf",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/isVersionOf"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/isVersionOf",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "language",
+      "definition_uri": "https://w3id.org/None/language",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/language"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/language",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "mediator",
+      "definition_uri": "https://w3id.org/None/mediator",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/mediator"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/mediator",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "medium",
+      "definition_uri": "https://w3id.org/None/medium",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/medium"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/medium",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "publisher",
+      "definition_uri": "https://w3id.org/None/publisher",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/publisher"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/publisher",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "references",
+      "definition_uri": "https://w3id.org/None/references",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/references"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/references",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "relation",
+      "definition_uri": "https://w3id.org/None/relation",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/relation"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/relation",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "replaces",
+      "definition_uri": "https://w3id.org/None/replaces",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/replaces"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/replaces",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "requires",
+      "definition_uri": "https://w3id.org/None/requires",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/requires"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/requires",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rights",
+      "definition_uri": "https://w3id.org/None/rights",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/rights"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/rights",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "source",
+      "definition_uri": "https://w3id.org/None/source",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/source"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/source",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "spatial",
+      "definition_uri": "https://w3id.org/None/spatial",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/spatial"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/spatial",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "tableOfContents",
+      "definition_uri": "https://w3id.org/None/tableOfContents",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/tableOfContents"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/tableOfContents",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "temporal",
+      "definition_uri": "https://w3id.org/None/temporal",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/temporal"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/temporal",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "type",
+      "definition_uri": "https://w3id.org/None/type",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/terms/type"
+      ],
+      "slot_uri": "http://purl.org/dc/terms/type",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "affiliation",
+      "definition_uri": "https://w3id.org/None/affiliation",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://schema.org/affiliation"
+      ],
+      "slot_uri": "http://schema.org/affiliation",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "definition_rdfs",
+      "definition_uri": "https://w3id.org/None/definition_rdfs",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://www.w3.org/2000/01/rdf-schema#definition"
+      ],
+      "slot_uri": "http://www.w3.org/2000/01/rdf-schema#definition",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "maker",
+      "definition_uri": "https://w3id.org/None/maker",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://xmlns.com/foaf/0.1/maker"
+      ],
+      "slot_uri": "http://xmlns.com/foaf/0.1/maker",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "name",
+      "definition_uri": "https://w3id.org/None/name",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://xmlns.com/foaf/0.1/name"
+      ],
+      "slot_uri": "http://xmlns.com/foaf/0.1/name",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "workInfoHomepage",
+      "definition_uri": "https://w3id.org/None/workInfoHomepage",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://xmlns.com/foaf/0.1/workInfoHomepage"
+      ],
+      "slot_uri": "http://xmlns.com/foaf/0.1/workInfoHomepage",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasAlpha2Code",
+      "definition_uri": "https://w3id.org/None/hasAlpha2Code",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasAlpha2Code"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasAlpha2Code",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasColumnLabel",
+      "definition_uri": "https://w3id.org/None/hasColumnLabel",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasColumnLabel"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasColumnLabel",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasLifeStage",
+      "definition_uri": "https://w3id.org/None/hasLifeStage",
+      "comments": [
+        "Varies per species; temporary solution"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasLifeStage"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasLifeStage",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasMailingAddress",
+      "definition_uri": "https://w3id.org/None/hasMailingAddress",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasMailingAddress"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasMailingAddress",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasMissingValueReason",
+      "definition_uri": "https://w3id.org/None/hasMissingValueReason",
+      "comments": [
+        "The reason choices are taken from the International Nucleotide Sequencing Data Collaborative (INSDC); see https://www.insdc.org/missing-value-reporting#."
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasMissingValueReason"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasMissingValueReason",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPairedNormal",
+      "definition_uri": "https://w3id.org/None/hasPairedNormal",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPairedNormal"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPairedNormal",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPairedTumor",
+      "definition_uri": "https://w3id.org/None/hasPairedTumor",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPairedTumor"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPairedTumor",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPhenotypeDescription",
+      "definition_uri": "https://w3id.org/None/hasPhenotypeDescription",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPhenotypeDescription"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPhenotypeDescription",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasPostalCode",
+      "definition_uri": "https://w3id.org/None/hasPostalCode",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasPostalCode"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasPostalCode",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasStage",
+      "definition_uri": "https://w3id.org/None/hasStage",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasStage"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasStage",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hasTemperature",
+      "definition_uri": "https://w3id.org/None/hasTemperature",
+      "comments": [
+        "Need definition"
+      ],
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#hasTemperature"
+      ],
+      "slot_uri": "https://datamodel.terra.bio/TerraCore#hasTemperature",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "definition_prov",
+      "definition_uri": "https://datamodel.terra.bio/definition_prov",
+      "from_schema": "https://datamodel.terra.bio/BioCore",
+      "mappings": [
+        "http://www.w3.org/ns/prov#definition"
+      ],
+      "slot_uri": "http://www.w3.org/ns/prov#definition",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "prefLabel",
+      "definition_uri": "https://datamodel.terra.bio/prefLabel",
+      "from_schema": "https://datamodel.terra.bio/BioCore",
+      "mappings": [
+        "http://www.w3.org/2004/02/skos/core#prefLabel"
+      ],
+      "slot_uri": "http://www.w3.org/2004/02/skos/core#prefLabel",
+      "multivalued": true,
+      "range": "string",
+      "@type": "SlotDefinition"
+    }
+  ],
+  "classes": [
+    {
+      "name": "VocabularyEncodingScheme",
+      "definition_uri": "https://w3id.org/None/VocabularyEncodingScheme",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/dcam/VocabularyEncodingScheme"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://purl.org/dc/dcam/VocabularyEncodingScheme",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Service",
+      "definition_uri": "https://w3id.org/None/Service",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://purl.org/dc/dcmitype/Service"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://purl.org/dc/dcmitype/Service",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "List",
+      "definition_uri": "https://w3id.org/None/List",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "rdf:List"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Class",
+      "definition_uri": "https://w3id.org/None/Class",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "rdfs:Class"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Resource",
+      "definition_uri": "https://w3id.org/None/Resource",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "rdfs:Resource"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/2000/01/rdf-schema#Resource",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Kind",
+      "definition_uri": "https://w3id.org/None/Kind",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://www.w3.org/2006/vcard/ns#Kind"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://www.w3.org/2006/vcard/ns#Kind",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Document",
+      "definition_uri": "https://w3id.org/None/Document",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://xmlns.com/foaf/0.1/Document"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://xmlns.com/foaf/0.1/Document",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Person",
+      "definition_uri": "https://w3id.org/None/Person",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "http://xmlns.com/foaf/0.1/Person"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://xmlns.com/foaf/0.1/Person",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "SingleCell",
+      "definition_uri": "https://w3id.org/None/SingleCell",
+      "from_schema": "https://datamodel.terra.bio/BioCoreFields",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#SingleCell"
+      ],
+      "slots": [
+        "hasCellCycle"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://datamodel.terra.bio/TerraCore#SingleCell",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Activity",
+      "definition_uri": "https://datamodel.terra.bio/Activity",
+      "from_schema": "https://datamodel.terra.bio/BioCore",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#Activity"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://datamodel.terra.bio/TerraCore#Activity",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Donor",
+      "definition_uri": "https://datamodel.terra.bio/Donor",
+      "from_schema": "https://datamodel.terra.bio/BioCore",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#Donor"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://datamodel.terra.bio/TerraCore#Donor",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Sample",
+      "definition_uri": "https://datamodel.terra.bio/Sample",
+      "from_schema": "https://datamodel.terra.bio/BioCore",
+      "mappings": [
+        "https://datamodel.terra.bio/TerraCore#Sample"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://datamodel.terra.bio/TerraCore#Sample",
+      "@type": "ClassDefinition"
+    }
+  ],
   "metamodel_version": "1.7.0",
   "source_file": "BioCoreDataModel.yaml",
-  "source_file_date": "2023-03-20T09:18:27",
-  "source_file_size": 339,
-  "generation_date": "2023-03-20T09:18:35",
+  "source_file_date": "2023-03-20T09:55:47",
+  "source_file_size": 1292,
+  "generation_date": "2023-03-20T09:55:53",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/BioCoreDataModel.context.jsonld",
     "https://w3id.org/linkml/types.context.jsonld",
+    "BioCoreFields.context.jsonld",
+    "BioCoreTables-min3.context.jsonld",
     {
       "@base": "https://datamodel.terra.bio/"
     }

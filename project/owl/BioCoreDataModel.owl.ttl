@@ -1,23 +1,35 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix BioCore: <https://datamodel.terra.bio/> .
+@prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix linkml: <https://w3id.org/linkml/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://datamodel.terra.bio> a owl:Ontology ;
     rdfs:label "biocore" ;
-    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-    linkml:generation_date "2023-03-20T09:18:37" ;
+    IAO:0000700 BioCore:Activity,
+        BioCore:Donor,
+        BioCore:Sample,
+        <https://w3id.org/None/Class>,
+        <https://w3id.org/None/Document>,
+        <https://w3id.org/None/Kind>,
+        <https://w3id.org/None/List>,
+        <https://w3id.org/None/Person>,
+        <https://w3id.org/None/Resource>,
+        <https://w3id.org/None/Service>,
+        <https://w3id.org/None/SingleCell>,
+        <https://w3id.org/None/VocabularyEncodingScheme> ;
+    dct:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    linkml:generation_date "2023-03-20T09:56:00" ;
     linkml:metamodel_version "1.7.0" ;
     linkml:source_file "BioCoreDataModel.yaml" ;
-    linkml:source_file_date "2023-03-20T09:18:27" ;
-    linkml:source_file_size 339 .
-
-linkml:ClassDefinition a owl:Class ;
-    rdfs:label "class_definition" .
-
-linkml:SlotDefinition a owl:Class ;
-    rdfs:label "slot_definition" .
+    linkml:source_file_date "2023-03-20T09:55:47" ;
+    linkml:source_file_size 1292 .
 
 linkml:SubsetDefinition a owl:Class ;
     rdfs:label "subset_definition" .
@@ -27,5 +39,1338 @@ linkml:TypeDefinition a owl:Class ;
 
 linkml:topValue a owl:DatatypeProperty ;
     rdfs:label "value" .
+
+<http://purl.org/dc/dcam/domainIncludes> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "domainIncludes" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <http://purl.org/dc/dcam/domainIncludes> .
+
+dct:abstract a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "abstract" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:abstract .
+
+dct:accessRights a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "accessRights" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:accessRights .
+
+dct:accrualMethod a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "accrualMethod" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:accrualMethod .
+
+dct:accrualPeriodicity a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "accrualPeriodicity" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:accrualPeriodicity .
+
+dct:accrualPolicy a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "accrualPolicy" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:accrualPolicy .
+
+dct:audience a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "audience" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:audience .
+
+dct:conformsTo a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "conformsTo" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:conformsTo .
+
+dct:contributor a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "contributor" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:contributor .
+
+dct:coverage a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "coverage" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:coverage .
+
+dct:creator a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "creator" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:creator .
+
+dct:description a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "description" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:description .
+
+dct:educationLevel a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "educationLevel" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:educationLevel .
+
+dct:extent a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "extent" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:extent .
+
+dct:hasFormat a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasFormat" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:hasFormat .
+
+dct:isFormatOf a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isFormatOf" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:isFormatOf .
+
+dct:isPartOf a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isPartOf" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:isPartOf .
+
+dct:isReferencedBy a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isReferencedBy" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:isReferencedBy .
+
+dct:isReplacedBy a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isReplacedBy" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:isReplacedBy .
+
+dct:isRequiredBy a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isRequiredBy" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:isRequiredBy .
+
+dct:isVersionOf a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isVersionOf" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:isVersionOf .
+
+dct:language a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "language" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:language .
+
+dct:mediator a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "mediator" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:mediator .
+
+dct:medium a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "medium" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:medium .
+
+dct:publisher a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "publisher" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:publisher .
+
+dct:references a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "references" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:references .
+
+dct:relation a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "relation" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:relation .
+
+dct:replaces a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "replaces" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:replaces .
+
+dct:requires a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "requires" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:requires .
+
+dct:rights a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "rights" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:rights .
+
+dct:source a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "source" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:source .
+
+dct:spatial a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "spatial" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:spatial .
+
+dct:tableOfContents a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "tableOfContents" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:tableOfContents .
+
+dct:temporal a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "temporal" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:temporal .
+
+dct:type a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "type" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch dct:type .
+
+<http://schema.org/affiliation> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "affiliation" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <http://schema.org/affiliation> .
+
+<http://schema.org/rangeIncludes> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "rangeIncludes" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <http://schema.org/rangeIncludes> .
+
+rdfs:definition a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "definition_rdfs" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch rdfs:definition .
+
+rdfs:member a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "member" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch rdfs:member .
+
+skos:prefLabel a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "prefLabel" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch skos:prefLabel .
+
+prov:definition a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "definition_prov" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch prov:definition .
+
+foaf:maker a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "maker" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch foaf:maker .
+
+foaf:name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "name" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch foaf:name .
+
+foaf:workInfoHomepage a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "workInfoHomepage" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch foaf:workInfoHomepage .
+
+BioCore:Activity a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Activity" ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#Activity> .
+
+BioCore:Donor a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Donor" ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#Donor> .
+
+BioCore:Sample a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Sample" ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#Sample> .
+
+<https://datamodel.terra.bio/TerraCore#confirmsDisease> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "confirmsDisease" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#confirmsDisease> .
+
+<https://datamodel.terra.bio/TerraCore#donated> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "donated" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#donated> .
+
+<https://datamodel.terra.bio/TerraCore#hasActivityType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasActivityType" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasActivityType> .
+
+<https://datamodel.terra.bio/TerraCore#hasAge> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAge" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAge> .
+
+<https://datamodel.terra.bio/TerraCore#hasAgeAtDeath> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAgeAtDeath" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAgeAtDeath> .
+
+<https://datamodel.terra.bio/TerraCore#hasAgeAtDiagnosis> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAgeAtDiagnosis" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAgeAtDiagnosis> .
+
+<https://datamodel.terra.bio/TerraCore#hasAgeAtOnset> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAgeAtOnset" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAgeAtOnset> .
+
+<https://datamodel.terra.bio/TerraCore#hasAgeCategory> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAgeCategory" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAgeCategory> .
+
+<https://datamodel.terra.bio/TerraCore#hasAgeUnit> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAgeUnit" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://datamodel.terra.bio/TerraCore#hasUnit> ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAgeUnit> .
+
+<https://datamodel.terra.bio/TerraCore#hasAlignedFragments> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAlignedFragments" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAlignedFragments> ;
+    skos:note "For alignment file types." .
+
+<https://datamodel.terra.bio/TerraCore#hasAllele> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAllele" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAllele> .
+
+<https://datamodel.terra.bio/TerraCore#hasAlpha2Code> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAlpha2Code" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAlpha2Code> .
+
+<https://datamodel.terra.bio/TerraCore#hasAmount> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAmount" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAmount> ;
+    skos:note "Consider replacing with a measurement ontology" .
+
+<https://datamodel.terra.bio/TerraCore#hasAmountUnit> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAmountUnit" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://datamodel.terra.bio/TerraCore#hasUnit> ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAmountUnit> .
+
+<https://datamodel.terra.bio/TerraCore#hasAnatomicalRegion> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAnatomicalRegion" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAnatomicalRegion> ;
+    skos:note "Many groups are convening to define Common Coordinate Frameworks for specific organs/species.  This will be a rapidly evolving area in the near future.  Thus allowing text or URI as we wait for the field to mature allows us to support what we hope will at a minimum be controlled vocabulary under discussion of these groups." .
+
+<https://datamodel.terra.bio/TerraCore#hasAnatomicalSite> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAnatomicalSite" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAnatomicalSite> ;
+    skos:note "May want to consider restricting this to UBERON terms but currently any URI is allowed.  This is useful for imaging and other whole body samples as UBERON does not have \\\"whole body\\\".  Use NCIT:C13041 for this." .
+
+<https://datamodel.terra.bio/TerraCore#hasAprioriCellType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAprioriCellType" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAprioriCellType> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasAssayActivity> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAssayActivity" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf prov:wasUsedBy ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAssayActivity> .
+
+<https://datamodel.terra.bio/TerraCore#hasAssayType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAssayType" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAssayType> .
+
+<https://datamodel.terra.bio/TerraCore#hasAverageReadLength> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasAverageReadLength" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasAverageReadLength> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasBioSample> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasBioSample" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasBioSample> .
+
+<https://datamodel.terra.bio/TerraCore#hasBioSampleType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasBioSampleType" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://datamodel.terra.bio/TerraCore#hasSampleType> ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasBioSampleType> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasBirthYear> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasBirthYear" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasBirthYear> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasCellState> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasCellState" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasCellState> .
+
+<https://datamodel.terra.bio/TerraCore#hasChecksum> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasChecksum" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasChecksum> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasChild> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasChild" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasChild> .
+
+<https://datamodel.terra.bio/TerraCore#hasChromosome> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasChromosome" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasChromosome> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasClonality> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasClonality" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasClonality> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasColumnLabel> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasColumnLabel" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasColumnLabel> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasCountry> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasCountry" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasCountry> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasCrossReference> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasCrossReference" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf skos:closeMatch ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasCrossReference> .
+
+<https://datamodel.terra.bio/TerraCore#hasCurrentAddress> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasCurrentAddress" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasCurrentAddress> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasDataModality> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDataModality" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDataModality> .
+
+<https://datamodel.terra.bio/TerraCore#hasDateCollected> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDateCollected" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDateCollected> .
+
+<https://datamodel.terra.bio/TerraCore#hasDateOfBirth> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDateOfBirth" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDateOfBirth> .
+
+<https://datamodel.terra.bio/TerraCore#hasDateOfDeath> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDateOfDeath" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDateOfDeath> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasDevelopmentalStage> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDevelopmentalStage" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDevelopmentalStage> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasDiagnosis> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDiagnosis" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDiagnosis> .
+
+<https://datamodel.terra.bio/TerraCore#hasDisease> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDisease" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDisease> .
+
+<https://datamodel.terra.bio/TerraCore#hasDiseaseStageType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDiseaseStageType" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDiseaseStageType> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasDiseaseStageValue> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDiseaseStageValue" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDiseaseStageValue> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasDonor> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDonor" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDonor> .
+
+<https://datamodel.terra.bio/TerraCore#hasDonorAgeAtCollection> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDonorAgeAtCollection" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDonorAgeAtCollection> .
+
+<https://datamodel.terra.bio/TerraCore#hasDonorAgeAtEvent> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDonorAgeAtEvent" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDonorAgeAtEvent> .
+
+<https://datamodel.terra.bio/TerraCore#hasDonorTreatmentType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDonorTreatmentType" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDonorTreatmentType> ;
+    skos:note "Need to add recommended vocabulary." .
+
+<https://datamodel.terra.bio/TerraCore#hasDose> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDose" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDose> .
+
+<https://datamodel.terra.bio/TerraCore#hasDuplicateFragments> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDuplicateFragments" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDuplicateFragments> ;
+    skos:note "For alignment data types.",
+        "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasDuration> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDuration" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDuration> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasDurationUnit> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasDurationUnit" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://datamodel.terra.bio/TerraCore#hasUnit> ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasDurationUnit> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasEstimatedLibrarySize> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasEstimatedLibrarySize" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasEstimatedLibrarySize> ;
+    skos:note "For alignment file types.",
+        "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasFamilyIdentifier> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasFamilyIdentifier" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasFamilyIdentifier> .
+
+<https://datamodel.terra.bio/TerraCore#hasFileFormat> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasFileFormat" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf BioCore:format ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasFileFormat> ;
+    skos:note "The definition of this field follows the convention used by the Human Cell Atlas." .
+
+<https://datamodel.terra.bio/TerraCore#hasFileSize> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasFileSize" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasFileSize> .
+
+<https://datamodel.terra.bio/TerraCore#hasFragments> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasFragments" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasFragments> ;
+    skos:note "For alignment file types.",
+        "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasGRCName> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasGRCName" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasGRCName> ;
+    skos:note "Name of the Reference Assembly in Genome Reference Consortium format (ncbi.nlm.nih.gov/grc.  Still draft.",
+        "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasGeneContext> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasGeneContext" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasGeneContext> .
+
+<https://datamodel.terra.bio/TerraCore#hasGeneExpressionProgram> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasGeneExpressionProgram" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasGeneExpressionProgram> .
+
+<https://datamodel.terra.bio/TerraCore#hasGeneticAncestry> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasGeneticAncestry" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasGeneticAncestry> ;
+    skos:note "Recommend using HANCESTRO ancestry categories.  http://purl.obolibrary.org/obo/HANCESTRO_0004" .
+
+<https://datamodel.terra.bio/TerraCore#hasGeneticModification> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasGeneticModification" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasGeneticModification> .
+
+<https://datamodel.terra.bio/TerraCore#hasGeneticModificationMethod> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasGeneticModificationMethod" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasGeneticModificationMethod> .
+
+<https://datamodel.terra.bio/TerraCore#hasGeneticModificationReference> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasGeneticModificationReference" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasGeneticModificationReference> .
+
+<https://datamodel.terra.bio/TerraCore#hasGeneticModificationType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasGeneticModificationType" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasGeneticModificationType> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasGenotypicSex> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasGenotypicSex" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasGenotypicSex> ;
+    skos:note "Add equivalence to http://purl.obolibrary.org/obo/PATO_0020000" .
+
+<https://datamodel.terra.bio/TerraCore#hasGrade> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasGrade" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasGrade> .
+
+<https://datamodel.terra.bio/TerraCore#hasHalfSibling> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasHalfSibling" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasHalfSibling> .
+
+<https://datamodel.terra.bio/TerraCore#hasHostOrganism> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasHostOrganism" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasHostOrganism> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasImmunogen> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasImmunogen" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasImmunogen> ;
+    skos:note "Need definition",
+        "Target is a string for now but will ultimately be a class. CHEBI term CHEBI:60816" .
+
+<https://datamodel.terra.bio/TerraCore#hasLibraryLayout> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasLibraryLayout" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasLibraryLayout> .
+
+<https://datamodel.terra.bio/TerraCore#hasLibraryPrepActivity> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasLibraryPrepActivity" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf prov:wasUsedBy ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasLibraryPrepActivity> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasLibraryPreparationType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasLibraryPreparationType" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasLibraryPreparationType> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasLifeStage> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasLifeStage" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasLifeStage> ;
+    skos:note "Varies per species; temporary solution" .
+
+<https://datamodel.terra.bio/TerraCore#hasLot> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasLot" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasLot> ;
+    skos:note "A serial or lot number that was manufactured together. Added for Antibodies but domain can expand." .
+
+<https://datamodel.terra.bio/TerraCore#hasLowerBound> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasLowerBound" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasLowerBound> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasMailingAddress> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasMailingAddress" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasMailingAddress> .
+
+<https://datamodel.terra.bio/TerraCore#hasMannerOfDeath> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasMannerOfDeath" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasMannerOfDeath> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasMeasurement> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasMeasurement" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasMeasurement> .
+
+<https://datamodel.terra.bio/TerraCore#hasMeasurementType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasMeasurementType" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasMeasurementType> ;
+    skos:note "Recommend LOINC or SNOMED vocabularies." .
+
+<https://datamodel.terra.bio/TerraCore#hasMedication> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasMedication" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasMedication> ;
+    skos:note "Recommend term or URL from MEDDRA or RxNORM. Note that this model of a medication is subject to change." .
+
+<https://datamodel.terra.bio/TerraCore#hasMissingValueReason> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasMissingValueReason" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasMissingValueReason> ;
+    skos:note "The reason choices are taken from the International Nucleotide Sequencing Data Collaborative (INSDC); see https://www.insdc.org/missing-value-reporting#." .
+
+<https://datamodel.terra.bio/TerraCore#hasMolecularSampleType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasMolecularSampleType" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://datamodel.terra.bio/TerraCore#hasSampleType> ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasMolecularSampleType> .
+
+<https://datamodel.terra.bio/TerraCore#hasNonDuplicatedFragments> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasNonDuplicatedFragments" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasNonDuplicatedFragments> ;
+    skos:note "For alignment file types." .
+
+<https://datamodel.terra.bio/TerraCore#hasOrganismType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasOrganismType" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasOrganismType> ;
+    skos:note "For example: Homo sapiens from NCBITaxon or http://purl.obolibrary.org/obo/NCBITaxon_9606 " .
+
+<https://datamodel.terra.bio/TerraCore#hasPairedEndIdentifier> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPairedEndIdentifier" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPairedEndIdentifier> .
+
+<https://datamodel.terra.bio/TerraCore#hasPairedNormal> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPairedNormal" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPairedNormal> .
+
+<https://datamodel.terra.bio/TerraCore#hasPairedTumor> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPairedTumor" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPairedTumor> .
+
+<https://datamodel.terra.bio/TerraCore#hasParent> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasParent" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasParent> .
+
+<https://datamodel.terra.bio/TerraCore#hasPartNumber> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPartNumber" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPartNumber> ;
+    skos:note "The part number is for reordering. Added for Antibodies but domain can expand." .
+
+<https://datamodel.terra.bio/TerraCore#hasPercentAlignedReads> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPercentAlignedReads" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPercentAlignedReads> .
+
+<https://datamodel.terra.bio/TerraCore#hasPercentDuplicateFragments> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPercentDuplicateFragments" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPercentDuplicateFragments> ;
+    skos:note "For alignment file types." .
+
+<https://datamodel.terra.bio/TerraCore#hasPhenopacket> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPhenopacket" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPhenopacket> .
+
+<https://datamodel.terra.bio/TerraCore#hasPhenotype> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPhenotype" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPhenotype> .
+
+<https://datamodel.terra.bio/TerraCore#hasPhenotypeDescription> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPhenotypeDescription" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPhenotypeDescription> .
+
+<https://datamodel.terra.bio/TerraCore#hasPhenotypicSex> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPhenotypicSex" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPhenotypicSex> .
+
+<https://datamodel.terra.bio/TerraCore#hasPlatform> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPlatform" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPlatform> .
+
+<https://datamodel.terra.bio/TerraCore#hasPlatformIdentifier> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPlatformIdentifier" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPlatformIdentifier> .
+
+<https://datamodel.terra.bio/TerraCore#hasPostalCode> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPostalCode" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPostalCode> .
+
+<https://datamodel.terra.bio/TerraCore#hasPreservationState> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasPreservationState" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasPreservationState> .
+
+<https://datamodel.terra.bio/TerraCore#hasProtocol> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasProtocol" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf BioCore:used ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasProtocol> .
+
+<https://datamodel.terra.bio/TerraCore#hasRace> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasRace" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasRace> ;
+    skos:note "Considering using HANCESTRO ancestry category subclasses as options here.  In the meantime, capturing a text string.  Also consider whether we need to track reported and genetic as determined by genetic analysis." .
+
+<https://datamodel.terra.bio/TerraCore#hasReadCount> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasReadCount" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasReadCount> ;
+    skos:note "Domain will change from File to SequencingOutputFile or SequenceActivity in future." .
+
+<https://datamodel.terra.bio/TerraCore#hasReadLength> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasReadLength" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasReadLength> ;
+    skos:note "Domain will change from File to SequencingOutputFile or SequenceActivity in future." .
+
+<https://datamodel.terra.bio/TerraCore#hasReferenceAllele> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasReferenceAllele" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasReferenceAllele> ;
+    skos:note "See also https://vrs.ga4gh.org/en/stable/terms_and_model.html#allele for a more comprehensive model." .
+
+<https://datamodel.terra.bio/TerraCore#hasReportedEthnicity> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasReportedEthnicity" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasReportedEthnicity> ;
+    skos:note "Recommend using HANCESTRO ancestry categories.  http://purl.obolibrary.org/obo/HANCESTRO_0004." .
+
+<https://datamodel.terra.bio/TerraCore#hasSampleTreatment> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasSampleTreatment" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf prov:wasUsedBy ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasSampleTreatment> .
+
+<https://datamodel.terra.bio/TerraCore#hasSampleTreatmentMethod> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasSampleTreatmentMethod" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasSampleTreatmentMethod> .
+
+<https://datamodel.terra.bio/TerraCore#hasSampleTreatmentType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasSampleTreatmentType" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasSampleTreatmentType> .
+
+<https://datamodel.terra.bio/TerraCore#hasSequenceExpression> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasSequenceExpression" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasSequenceExpression> ;
+    skos:note "See https://vrs.ga4gh.org/en/stable/terms_and_model.html#sequence-expression and https://vrsatile.readthedocs.io/en/latest/value_object_descriptor/index.html#expression." .
+
+<https://datamodel.terra.bio/TerraCore#hasSequenceLocation> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasSequenceLocation" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasSequenceLocation> .
+
+<https://datamodel.terra.bio/TerraCore#hasSequencingActivity> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasSequencingActivity" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf prov:wasUsedBy ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasSequencingActivity> .
+
+<https://datamodel.terra.bio/TerraCore#hasServiceProvider> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasServiceProvider" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasServiceProvider> .
+
+<https://datamodel.terra.bio/TerraCore#hasSexAssignedAtBirth> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasSexAssignedAtBirth" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasSexAssignedAtBirth> .
+
+<https://datamodel.terra.bio/TerraCore#hasSibling> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasSibling" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasSibling> .
+
+<https://datamodel.terra.bio/TerraCore#hasSource> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasSource" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasSource> ;
+    skos:note "The source is a string but will ultimately be a Vendor class. Added for Antibodies but domain can expand." .
+
+<https://datamodel.terra.bio/TerraCore#hasStage> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasStage" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasStage> .
+
+<https://datamodel.terra.bio/TerraCore#hasStartPosition> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasStartPosition" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasStartPosition> .
+
+<https://datamodel.terra.bio/TerraCore#hasStopPosition> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasStopPosition" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasStopPosition> .
+
+<https://datamodel.terra.bio/TerraCore#hasStrain> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasStrain" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasStrain> .
+
+<https://datamodel.terra.bio/TerraCore#hasStructuralVariationType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasStructuralVariationType" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasStructuralVariationType> .
+
+<https://datamodel.terra.bio/TerraCore#hasTarget> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasTarget" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasTarget> ;
+    skos:note "Need definition",
+        "Target is a string for now but will ultimately be a class, and this will change to an ObjectProperty." .
+
+<https://datamodel.terra.bio/TerraCore#hasTemperature> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasTemperature" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasTemperature> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasTemperatureUnit> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasTemperatureUnit" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://datamodel.terra.bio/TerraCore#hasUnit> ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasTemperatureUnit> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasTermName> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasTermName" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasTermName> .
+
+<https://datamodel.terra.bio/TerraCore#hasTreatment> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasTreatment" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasTreatment> .
+
+<https://datamodel.terra.bio/TerraCore#hasTreatmentOutcome> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasTreatmentOutcome" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasTreatmentOutcome> ;
+    skos:note "Should the model define a preferred vocabulary? e.g. positive, negative, no effect?  The specific outcome may need to be more specific, reduced tumor size by  .. but the categories listed are useful." .
+
+<https://datamodel.terra.bio/TerraCore#hasTumorMorphology> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasTumorMorphology" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://datamodel.terra.bio/TerraCore#hasMorphology> ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasTumorMorphology> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasURI> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasURI" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasURI> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasUpperBound> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasUpperBound" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasUpperBound> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasVariantCall> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasVariantCall" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasVariantCall> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasVersion> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasVersion" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasVersion> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#hasWeight> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasWeight" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasWeight> .
+
+<https://datamodel.terra.bio/TerraCore#hasWeightUnit> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasWeightUnit" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf <https://datamodel.terra.bio/TerraCore#hasUnit> ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasWeightUnit> .
+
+<https://datamodel.terra.bio/TerraCore#isCauseOfDeath> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isCauseOfDeath" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#isCauseOfDeath> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#isContributorToDeath> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isContributorToDeath" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#isContributorToDeath> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#isFundedBy> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isFundedBy" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#isFundedBy> .
+
+<https://datamodel.terra.bio/TerraCore#isGeneratedByPipeline> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isGeneratedByPipeline" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf BioCore:wasGeneratedBy ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#isGeneratedByPipeline> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#isPairedWith> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isPairedWith" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#isPairedWith> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#isWholeCell> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "isWholeCell" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#isWholeCell> ;
+    skos:note "Need definition" .
+
+<https://datamodel.terra.bio/TerraCore#usesAntibody> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "usesAntibody" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf BioCore:used ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#usesAntibody> ;
+    skos:note "Can be used as an ObjectProperty with the Antibody class or as a DataType property, depending on need. Antibody should be linked to OBI in future. Note this could link to nonassay activities like CHiP" .
+
+<https://datamodel.terra.bio/TerraCore#usesLibrary> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "usesLibrary" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf BioCore:used ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#usesLibrary> .
+
+<https://datamodel.terra.bio/TerraCore#usesReferenceAssembly> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "usesReferenceAssembly" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#usesReferenceAssembly> .
+
+<https://datamodel.terra.bio/TerraCore#usesSample> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "usesSample" ;
+    rdfs:range linkml:String ;
+    rdfs:subPropertyOf BioCore:used ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#usesSample> ;
+    skos:note "BioSample and MolecularSample both inherit range from Sample" .
+
+<https://datamodel.terra.bio/TerraCore#usesSoftware> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "usesSoftware" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#usesSoftware> .
+
+BioCore:format a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "format" ;
+    rdfs:range linkml:String ;
+    skos:editorialNote "MAM added this so that the hasFileFormat is_a would be legal" .
+
+BioCore:wasGeneratedBy a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "wasGeneratedBy" ;
+    rdfs:range linkml:String ;
+    skos:editorialNote "MAM added this so that the isGeneratedByPipeline is_a would be legal" .
+
+<https://w3id.org/None/Class> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Class" ;
+    skos:exactMatch rdfs:Class .
+
+<https://w3id.org/None/Document> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Document" ;
+    skos:exactMatch foaf:Document .
+
+<https://w3id.org/None/Kind> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Kind" ;
+    skos:exactMatch <http://www.w3.org/2006/vcard/ns#Kind> .
+
+<https://w3id.org/None/List> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "List" ;
+    skos:exactMatch rdf:List .
+
+<https://w3id.org/None/Person> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Person" ;
+    skos:exactMatch foaf:Person .
+
+<https://w3id.org/None/Resource> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Resource" ;
+    skos:exactMatch rdfs:Resource .
+
+<https://w3id.org/None/Service> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Service" ;
+    skos:exactMatch <http://purl.org/dc/dcmitype/Service> .
+
+<https://w3id.org/None/SingleCell> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "SingleCell" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <https://datamodel.terra.bio/TerraCore#hasCellCycle> ] ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#SingleCell> .
+
+<https://w3id.org/None/VocabularyEncodingScheme> a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "VocabularyEncodingScheme" ;
+    skos:exactMatch <http://purl.org/dc/dcam/VocabularyEncodingScheme> .
+
+skos:closeMatch a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "closeMatch" ;
+    rdfs:range linkml:String ;
+    skos:editorialNote "MAM added this so that the hasCrossReference is_a would be legal" ;
+    skos:exactMatch skos:closeMatch .
+
+<https://datamodel.terra.bio/TerraCore#hasCellCycle> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasCellCycle" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasCellCycle> .
+
+<https://datamodel.terra.bio/TerraCore#hasMorphology> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasMorphology" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasMorphology> .
+
+<https://datamodel.terra.bio/TerraCore#hasSampleType> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasSampleType" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasSampleType> .
+
+BioCore:used a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "used" ;
+    rdfs:range linkml:String ;
+    skos:editorialNote "MAM added this so that the usesAntibody is_a would be legal" .
+
+prov:wasUsedBy a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "wasUsedBy" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch prov:wasUsedBy .
+
+<https://datamodel.terra.bio/TerraCore#hasUnit> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "hasUnit" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <https://datamodel.terra.bio/TerraCore#hasUnit> ;
+    skos:note "Need definition" .
+
+linkml:ClassDefinition a owl:Class ;
+    rdfs:label "class_definition" .
+
+linkml:SlotDefinition a owl:Class ;
+    rdfs:label "slot_definition" .
 
 
