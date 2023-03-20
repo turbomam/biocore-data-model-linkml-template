@@ -1,10 +1,31 @@
 id: https://datamodel.terra.bio # this will change when BioCore gets a permanent home
 name: biocore
 prefixes:
+  BioCore: https://datamodel.terra.bio/ # MAM added. This is the URL base for most or all schema elements. It should be given a prefix.
+  dct: http://purl.org/dc/terms/
+  foaf: http://xmlns.com/foaf/0.1/
   linkml: https://w3id.org/linkml/
+  prov: http://www.w3.org/ns/prov#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  skos: http://www.w3.org/2004/02/skos/core#
 imports:
   - linkml:types
-#  - BioCoreFields
-#  - BioCoreTables-min3
-default_range: string # if not specified, any string or link is ok
+  - BioCoreFields
+  - BioCoreTables-min3
+default_range: string # if not specified, any string or link is ok (MAM: BUT slots taking "link": arguments should really be typed uriorcurie)
 classes: # now use the imported classes from BioCoreTables
+
+slots:
+  closeMatch:
+    slot_uri: skos:closeMatch
+    multivalued: true
+    notes: MAM added this so that the hasCrossReference is_a would be legal
+  wasGeneratedBy:
+    notes: MAM added this so that the isGeneratedByPipeline is_a would be legal
+  used:
+    notes: MAM added this so that the usesAntibody is_a would be legal
+  #  date:
+  #    notes: MAM added this so that the hasDateCollected is_a would be legal
+  format:
+    notes: MAM added this so that the hasFileFormat is_a would be legal
