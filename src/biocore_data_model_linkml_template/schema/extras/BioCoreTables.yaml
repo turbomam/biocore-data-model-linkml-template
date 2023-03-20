@@ -1,0 +1,270 @@
+...name: BioCoreTables
+description: BioCoreTables
+id: https://datamodel.terra.bio/BioCoreTables
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  BioCoreTables: https://w3id.org/None/
+default_prefix: BioCoreTables
+slots:
+  member:
+    slot_uri: rdfs:member
+    multivalued: true
+  domainIncludes:
+    slot_uri: http://purl.org/dc/dcam/domainIncludes
+    multivalued: true
+  rangeIncludes:
+    slot_uri: http://schema.org/rangeIncludes
+    multivalued: true
+  abstract:
+    slot_uri: http://purl.org/dc/terms/abstract
+    multivalued: true
+  accessRights:
+    slot_uri: http://purl.org/dc/terms/accessRights
+    multivalued: true
+  accrualMethod:
+    slot_uri: http://purl.org/dc/terms/accrualMethod
+    multivalued: true
+  accrualPeriodicity:
+    slot_uri: http://purl.org/dc/terms/accrualPeriodicity
+    multivalued: true
+  accrualPolicy:
+    slot_uri: http://purl.org/dc/terms/accrualPolicy
+    multivalued: true
+  audience:
+    slot_uri: http://purl.org/dc/terms/audience
+    multivalued: true
+  conformsTo:
+    slot_uri: http://purl.org/dc/terms/conformsTo
+    multivalued: true
+  contributor:
+    slot_uri: http://purl.org/dc/terms/contributor
+    multivalued: true
+  coverage:
+    slot_uri: http://purl.org/dc/terms/coverage
+    multivalued: true
+  creator:
+    slot_uri: http://purl.org/dc/terms/creator
+    multivalued: true
+  description:
+    slot_uri: http://purl.org/dc/terms/description
+    multivalued: true
+  educationLevel:
+    slot_uri: http://purl.org/dc/terms/educationLevel
+    multivalued: true
+  extent:
+    slot_uri: http://purl.org/dc/terms/extent
+    multivalued: true
+  hasFormat:
+    slot_uri: http://purl.org/dc/terms/hasFormat
+    multivalued: true
+  hasVersion:
+    slot_uri: http://purl.org/dc/terms/hasVersion
+    multivalued: true
+  isFormatOf:
+    slot_uri: http://purl.org/dc/terms/isFormatOf
+    multivalued: true
+  isPartOf:
+    slot_uri: http://purl.org/dc/terms/isPartOf
+    multivalued: true
+  isReferencedBy:
+    slot_uri: http://purl.org/dc/terms/isReferencedBy
+    multivalued: true
+  isReplacedBy:
+    slot_uri: http://purl.org/dc/terms/isReplacedBy
+    multivalued: true
+  isRequiredBy:
+    slot_uri: http://purl.org/dc/terms/isRequiredBy
+    multivalued: true
+  isVersionOf:
+    slot_uri: http://purl.org/dc/terms/isVersionOf
+    multivalued: true
+  language:
+    slot_uri: http://purl.org/dc/terms/language
+    multivalued: true
+  mediator:
+    slot_uri: http://purl.org/dc/terms/mediator
+    multivalued: true
+  medium:
+    slot_uri: http://purl.org/dc/terms/medium
+    multivalued: true
+  publisher:
+    slot_uri: http://purl.org/dc/terms/publisher
+    multivalued: true
+  references:
+    slot_uri: http://purl.org/dc/terms/references
+    multivalued: true
+  relation:
+    slot_uri: http://purl.org/dc/terms/relation
+    multivalued: true
+  replaces:
+    slot_uri: http://purl.org/dc/terms/replaces
+    multivalued: true
+  requires:
+    slot_uri: http://purl.org/dc/terms/requires
+    multivalued: true
+  rights:
+    slot_uri: http://purl.org/dc/terms/rights
+    multivalued: true
+  source:
+    slot_uri: http://purl.org/dc/terms/source
+    multivalued: true
+  spatial:
+    slot_uri: http://purl.org/dc/terms/spatial
+    multivalued: true
+  tableOfContents:
+    slot_uri: http://purl.org/dc/terms/tableOfContents
+    multivalued: true
+  temporal:
+    slot_uri: http://purl.org/dc/terms/temporal
+    multivalued: true
+  type:
+    slot_uri: http://purl.org/dc/terms/type
+    multivalued: true
+  affiliation:
+    slot_uri: http://schema.org/affiliation
+    multivalued: true
+  maker:
+    slot_uri: http://xmlns.com/foaf/0.1/maker
+    multivalued: true
+  name:
+    slot_uri: http://xmlns.com/foaf/0.1/name
+    multivalued: true
+  workInfoHomepage:
+    slot_uri: http://xmlns.com/foaf/0.1/workInfoHomepage
+    multivalued: true
+classes:
+  OBI_0001573:
+    class_uri: http://purl.obolibrary.org/obo/OBI_0001573
+  VocabularyEncodingScheme:
+    class_uri: http://purl.org/dc/dcam/VocabularyEncodingScheme
+  Service:
+    class_uri: http://purl.org/dc/dcmitype/Service
+  EFO_0007831:
+    class_uri: http://www.ebi.ac.uk/efo/EFO_0007831
+  List:
+    class_uri: rdf:List
+  Class:
+    class_uri: rdfs:Class
+  Resource:
+    class_uri: rdfs:Resource
+  Kind:
+    class_uri: http://www.w3.org/2006/vcard/ns#Kind
+  Document:
+    class_uri: http://xmlns.com/foaf/0.1/Document
+  Person:
+    class_uri: http://xmlns.com/foaf/0.1/Person
+  Activity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#Activity
+  AlignmentActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#AlignmentActivity
+  AlignmentFile:
+    is_a: File
+    class_uri: https://datamodel.terra.bio/TerraCore#AlignmentFile
+  AnalysisActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#AnalysisActivity
+  Antibody:
+    is_a: BFO_0000040
+    class_uri: https://datamodel.terra.bio/TerraCore#Antibody
+  AssayActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#AssayActivity
+  BioSample:
+    is_a: Sample
+    class_uri: https://datamodel.terra.bio/TerraCore#BioSample
+  BioSampleDissociationActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#BioSampleDissociationActivity
+  Diagnosis:
+    is_a: IAO_0000030
+    class_uri: https://datamodel.terra.bio/TerraCore#Diagnosis
+  DogDonor:
+    is_a: Donor
+    class_uri: https://datamodel.terra.bio/TerraCore#DogDonor
+  Donor:
+    is_a: OBI_0100026
+    class_uri: https://datamodel.terra.bio/TerraCore#Donor
+  DonorTreatmentActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#DonorTreatmentActivity
+  ExperimentActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#ExperimentActivity
+  FamilyMember:
+    is_a: OBI_0100026
+    class_uri: https://datamodel.terra.bio/TerraCore#FamilyMember
+  File:
+    comments:
+    - 'Used definition from http://semanticscience.org/resource/SIO_000396 but equivalence
+      to http://www.w3.org/ns/dcat#Distribution doesn''t make sense in this context;
+      thus we have our own class.  Also added electronic. '
+    is_a: IAO_0000030
+    class_uri: https://datamodel.terra.bio/TerraCore#File
+  HistopathologyActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#HistopathologyActivity
+  HumanDonor:
+    is_a: Donor
+    class_uri: https://datamodel.terra.bio/TerraCore#HumanDonor
+  Library:
+    is_a: BFO_0000040
+    class_uri: https://datamodel.terra.bio/TerraCore#Library
+  LibraryPreparationActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#LibraryPreparationActivity
+  Measurement:
+    is_a: IAO_0000030
+    class_uri: https://datamodel.terra.bio/TerraCore#Measurement
+  MolecularSample:
+    is_a: Sample
+    class_uri: https://datamodel.terra.bio/TerraCore#MolecularSample
+  MouseDonor:
+    is_a: Donor
+    class_uri: https://datamodel.terra.bio/TerraCore#MouseDonor
+  NucleusIsolationActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#NucleusIsolationActivity
+  Project:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#Project
+  ReferenceAssembly:
+    comments:
+    - Instances should include either a cross reference to the reference sequence
+      or an official GRCName from the Genome Reference Consortium, or both.
+    is_a: OBI_0001573
+    class_uri: https://datamodel.terra.bio/TerraCore#ReferenceAssembly
+  Sample:
+    is_a: OBI_0100051
+    class_uri: https://datamodel.terra.bio/TerraCore#Sample
+  SampleTreatmentActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#SampleTreatmentActivity
+  SequenceFile:
+    is_a: File
+    class_uri: https://datamodel.terra.bio/TerraCore#SequenceFile
+  SequenceLocation:
+    is_a: OBI_0000973
+    class_uri: https://datamodel.terra.bio/TerraCore#SequenceLocation
+  SequencingActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#SequencingActivity
+  SingleCellAssignment:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#SingleCellAssignment
+  SingleCellIsolationActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#SingleCellIsolationActivity
+  VariantCall:
+    is_a: OBI_0000973
+    class_uri: https://datamodel.terra.bio/TerraCore#VariantCall
+  VariantCallSetFile:
+    is_a: File
+    class_uri: https://datamodel.terra.bio/TerraCore#VariantCallSetFile
+  VariantCallingActivity:
+    is_a: Activity
+    class_uri: https://datamodel.terra.bio/TerraCore#VariantCallingActivity
+

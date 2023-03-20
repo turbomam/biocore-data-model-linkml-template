@@ -131,7 +131,7 @@ examples/%.ttl: src/data/examples/%.yaml
 
 test-examples: examples/output
 
-examples/output: src/biocore_data_model_linkml_template/schema/biocore_data_model_linkml_template.yaml
+examples/output: src/biocore_data_model_linkml_template/schema/from_cookiecutter/biocore_data_model_linkml_template.yaml
 	mkdir -p $@
 	$(RUN) linkml-run-examples \
 		--output-formats json \

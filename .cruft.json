@@ -7,7 +7,7 @@
       "project_name": "biocore-data-model-linkml-template",
       "__project_slug": "biocore_data_model_linkml_template",
       "github_org": "turbomam",
-      "__source_path": "src/biocore_data_model_linkml_template/schema/biocore_data_model_linkml_template.yaml",
+      "__source_path": "src/biocore_data_model_linkml_template/schema/BioCoreDataModel.yaml",
       "project_description": "LinkML model for the Data Biosphere project, migrated from https://github.com/DataBiosphere/biocore-data-model/tree/main/content/linkml into a LinkML cookie cutter template",
       "full_name": "Mark Andrew Miller",
       "email": "MAM@lbl.gov",
