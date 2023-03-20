@@ -1,0 +1,7 @@
+---
+name: biocore_data_model_linkml_template
+author: Mark Andrew Miller <MAM@lbl.gov>
+description: LinkML model for the Data Biosphere project, migrated from https://github.com/DataBiosphere/biocore-data-model/tree/main/content/linkml into a LinkML cookie cutter template
+source_schema_path: src/biocore_data_model_linkml_template/schema/biocore_data_model_linkml_template.yaml
+google_sheet_id: 1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ
+google_sheet_tabs: personinfo enums

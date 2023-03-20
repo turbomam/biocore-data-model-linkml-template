@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "b801ab6c7e44c46db15905bf440aa573a8f1b3b2",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "biocore-data-model-linkml-template",
+      "__project_slug": "biocore_data_model_linkml_template",
+      "github_org": "turbomam",
+      "__source_path": "src/biocore_data_model_linkml_template/schema/biocore_data_model_linkml_template.yaml",
+      "project_description": "LinkML model for the Data Biosphere project, migrated from https://github.com/DataBiosphere/biocore-data-model/tree/main/content/linkml into a LinkML cookie cutter template",
+      "full_name": "Mark Andrew Miller",
+      "email": "MAM@lbl.gov",
+      "__author": "Mark Andrew Miller <MAM@lbl.gov>",
+      "license": "BSD-3",
+      "main_schema_class": "Placeholder",
+      "create_python_classes": "Yes",
+      "use_schemasheets": "No",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter"
+    }
+  },
+  "directory": null
+}
